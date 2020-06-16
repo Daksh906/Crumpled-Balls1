@@ -7,7 +7,7 @@ const Body = Matter.Body;
 const Render = Matter.Render;
 function preload()
 {
-	
+  
 }
 
 function setup() {
@@ -26,7 +26,7 @@ function setup() {
 	
 	dustbin3 = new Dustbin(590,625,20,100);
 	
-	paper1 = new Paper(50,50,20);
+	paper1 = new Paper(50,10,30);
 	ground1  = new Ground(400,690,800,20)
 
 	Engine.run(engine);
@@ -36,7 +36,7 @@ function setup() {
 
 function draw() {
   
-  background(0);
+  background("white");
   
  paper1.display();
  ground1.display();
@@ -49,7 +49,7 @@ function draw() {
 }
 function keyPressed(){
 	if(keyCode === 32){
-		Matter.Body.applyForce(paper1.body,paper1.body.position,{x:60,y:-60});
+		Matter.Body.applyForce(paper1.body,paper1.body.position,{x:135,y:-130});
 	}
 }
 
